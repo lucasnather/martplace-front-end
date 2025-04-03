@@ -1,5 +1,6 @@
 import { createStackNavigator, StackScreenProps } from "@react-navigation/stack"
 import { Annoucement } from "../screens/auth/annoucement"
+import { UpdateAnnoucements } from "../screens/auth/update-annoucements"
 
 import { Login } from "../screens/login"
 import { Register } from "../screens/register"
@@ -24,6 +25,7 @@ export function StackNavigator() {
                 name="Register" component={Register}
             />
             <Stack.Screen  name="Annoucement" component={Annoucement} />
+            <Stack.Screen  name="Update Annoucement" component={UpdateAnnoucements} />
             <Stack.Screen name="Main" component={TabNavigator} />
         </Stack.Navigator>
     )

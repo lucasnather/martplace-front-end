@@ -10,12 +10,16 @@ export function MyAnnoucements() {
         navigate("Update Annoucement", {})
     }
 
+    const goToCreateAnnoucements = () => {
+        navigate("Create Annoucement", {})
+    }
+
     return (
         <View className="px-5">
             <SafeAreaView >
                 <View className="flex-row justify-between w-[70%] ml-auto mt-10">
                     <Text className="font-bold text-[20px]">Meus Anúncios</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={goToCreateAnnoucements}>
                         <Plus />
                     </TouchableOpacity>
                 </View>

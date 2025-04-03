@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { ArrowLeft, Bank, Barcode, Money, Power, QrCode, Trash, WhatsappLogo } from "phosphor-react-native";
+import { ArrowLeft, Bank, Barcode, Money, PencilSimpleLine, Power, QrCode, Trash, WhatsappLogo } from "phosphor-react-native";
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Bike from "../../../assets/bike.png"
 import User from "../../../assets/user-annouc.png"
@@ -14,9 +14,12 @@ export function UpdateAnnoucements() {
     return (
             <SafeAreaView>
                 <ScrollView>
-                    <TouchableOpacity onPress={navigateToBack} className="px-5">
-                        <ArrowLeft size={30}/>
-                    </TouchableOpacity>
+                    <View className="flex-row justify-between px-5">
+                        <TouchableOpacity onPress={navigateToBack} className="px-5">
+                            <ArrowLeft size={30}/>
+                        </TouchableOpacity>
+                        <PencilSimpleLine />
+                    </View>
                     <View className="w-full my-10 bg-primary-blue">
                         <Image source={Bike} className="w-full" />
                     </View>

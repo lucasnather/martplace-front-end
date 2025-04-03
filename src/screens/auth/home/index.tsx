@@ -30,6 +30,10 @@ export function Home() {
         navigate("Annoucement", {})
     }
 
+    const goToMyAnnoucement = () => {
+        navigate("My Annoucement", {})
+    }
+
     return (
         <SafeAreaView className="flex-1">
             <ScrollView className="px-5">
@@ -57,7 +61,7 @@ export function Home() {
                     </View>
 
                     <TouchableOpacity className="flex-row items-center">
-                        <Text className="text-xs text-blue-800">Meus anúncios</Text>
+                        <Text className="text-xs text-blue-800" onPress={goToMyAnnoucement}>Meus anúncios</Text>
                         <ArrowRight size={32} color="#364D9D"/>
                     </TouchableOpacity>
                 </View>

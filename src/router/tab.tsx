@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { Annoucement } from "../screens/auth/annoucement"
 import { Home } from "../screens/auth/home"
 
 const Tabs = createBottomTabNavigator()
@@ -9,10 +10,13 @@ export function TabNavigator() {
             headerShown: false
         }}>
             <Tabs.Screen 
-                name="Home" component={Home}
+                name="Home" 
+                component={Home}
             />
             {/* <Tabs.Screen 
-                name="Register" component={Register}
+                name="Annoucement" 
+                component={Annoucement}
+                options={{tabBarItemStyle: { display: "none" }}}
             /> */}
         </Tabs.Navigator>
     )

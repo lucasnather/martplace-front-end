@@ -4,11 +4,13 @@ import { ArrowRight, MagnifyingGlass, Plus, Sliders, Tag, X } from "phosphor-rea
 import AvatarHome from "../../../assets/avatar-home.png";
 import Product from "../../../assets/product.png";
 import { Filter } from "../../../components/filter";
+import { useNavigation } from "@react-navigation/native";
 
 const { height } = Dimensions.get("window");
 
 export function Home() {
     const [isOpen, setIsOpen] = useState(false);
+    const { navigate } = useNavigation()
     
     const animatedHeight = useRef(new Animated.Value(0)).current; 
 
@@ -23,6 +25,10 @@ export function Home() {
 
         setIsOpen(!isOpen);
     };
+
+    const goToAnnoucement = () => {
+        navigate("Annoucement", {})
+    }
 
     return (
         <SafeAreaView className="flex-1">
@@ -75,7 +81,7 @@ export function Home() {
 
                 <View className="flex-row items-center justify-between flex-wrap w-full gap-y-10">
                     <View>
-                        <TouchableOpacity className="rounded-xl overflow-hidden w-[180px] h-[100px]">
+                        <TouchableOpacity className="rounded-xl overflow-hidden w-[180px] h-[100px]" onPress={goToAnnoucement}>
                             <ImageBackground source={Product} className="flex-row justify-between w-full h-full p-1">
                                 <Image source={AvatarHome} />
                                 <Text className="bg-gray-700 text-white h-[30px] p-2 rounded-xl">Usado</Text>

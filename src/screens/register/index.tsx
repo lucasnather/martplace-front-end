@@ -8,7 +8,7 @@ export function Register() {
     const { navigate} = useNavigation()
 
     function goToLogin() {
-        navigate("Login")
+        navigate("Login", {})
     }
 
     return (

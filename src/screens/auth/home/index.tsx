@@ -3,6 +3,7 @@ import { SafeAreaView, ScrollView, Text, TouchableOpacity, View, Image, TextInpu
 import { ArrowRight, MagnifyingGlass, Plus, Sliders, Tag, X } from "phosphor-react-native";
 import AvatarHome from "../../../assets/avatar-home.png";
 import Product from "../../../assets/product.png";
+import { Filter } from "../../../components/filter";
 
 const { height } = Dimensions.get("window");
 
@@ -91,12 +92,7 @@ export function Home() {
                     className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-lg p-10"
                     style={{ height: animatedHeight }}
                 >
-                    <View className="flex-row justify-between items-center">
-                        <Text className="text-lg text-gray-800">Filtrar anúncios</Text>
-                        <TouchableOpacity onPress={toggleFilter}>
-                            <X size={32}/>
-                        </TouchableOpacity>
-                    </View>
+                    <Filter />
                 </Animated.View>
             )}
         </SafeAreaView>

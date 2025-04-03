@@ -92,7 +92,9 @@ export function Home() {
                     className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-lg p-10"
                     style={{ height: animatedHeight }}
                 >
-                    <Filter />
+                    <Filter 
+                        toggleFilter={toggleFilter}
+                    />
                 </Animated.View>
             )}
         </SafeAreaView>

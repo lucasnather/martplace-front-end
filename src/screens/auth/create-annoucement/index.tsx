@@ -5,12 +5,16 @@ import { SafeAreaView, ScrollView, Switch, Text, TextInput, TouchableOpacity, Vi
 import BouncyCheckbox from "react-native-bouncy-checkbox"
 
 export function CreateAnnoucement() {
-    const { goBack } = useNavigation()
+    const { goBack, navigate } = useNavigation()
     const [isEnabled, setIsEnabled] = useState(false)
     const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
     const navigateToBack = () => {
         goBack()
+    }
+    
+    const navigateToPreVisualization = () => {
+        navigate("Pre Visualization", {})
     }
 
     return (
@@ -120,7 +124,7 @@ export function CreateAnnoucement() {
                             </TouchableOpacity>
                         </View>
                         <View className="w-[45%]">
-                            <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px]">
+                            <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px]" onPress={navigateToPreVisualization} >
                                 <Text className="text-base-gray-7 text-center  text-[14px] font-bold">Avançar</Text>
                             </TouchableOpacity>
                         </View>

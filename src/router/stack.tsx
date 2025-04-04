@@ -1,6 +1,7 @@
 import { createStackNavigator, StackScreenProps } from "@react-navigation/stack"
 import { Annoucement } from "../screens/auth/annoucement"
 import { CreateAnnoucement } from "../screens/auth/create-annoucement"
+import { PreVisualization } from "../screens/auth/pre-visualization"
 import { UpdateAnnoucements } from "../screens/auth/update-annoucements"
 
 import { Login } from "../screens/login"
@@ -28,6 +29,7 @@ export function StackNavigator() {
             <Stack.Screen  name="Annoucement" component={Annoucement} />
             <Stack.Screen  name="Update Annoucement" component={UpdateAnnoucements} />
             <Stack.Screen   name="Create Annoucement" component={CreateAnnoucement} />
+            <Stack.Screen   name="Pre Visualization" component={PreVisualization} />
             <Stack.Screen name="Main" component={TabNavigator} />
         </Stack.Navigator>
     )

@@ -26,10 +26,10 @@ export function StackNavigator() {
             <Stack.Screen 
                 name="Register" component={Register}
             />
-            <Stack.Screen  name="Annoucement" component={Annoucement} />
-            <Stack.Screen  name="Update Annoucement" component={UpdateAnnoucements} />
-            <Stack.Screen   name="Create Annoucement" component={CreateAnnoucement} />
-            <Stack.Screen   name="Pre Visualization" component={PreVisualization} />
+            <Stack.Screen name="Annoucement" component={Annoucement} />
+            <Stack.Screen name="Update Annoucement" component={UpdateAnnoucements} />
+            <Stack.Screen name="Create Annoucement" component={CreateAnnoucement} />
+            <Stack.Screen name="Pre Visualization" component={PreVisualization} />
             <Stack.Screen name="Main" component={TabNavigator} />
         </Stack.Navigator>
     )

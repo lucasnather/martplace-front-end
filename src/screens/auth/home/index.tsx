@@ -2,10 +2,10 @@ import { useRef, useState } from "react";
 import { SafeAreaView, ScrollView, Text, TouchableOpacity, View, Image, TextInput, ImageBackground, Animated, Dimensions } from "react-native";
 import { ArrowRight, MagnifyingGlass, Plus, Sliders, Tag, X } from "phosphor-react-native";
 import AvatarHome from "../../../assets/avatar-home.png";
-import Product from "../../../assets/product.png";
 import { Filter } from "../../../components/filter";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "../../../components/button";
+import { CardProduct } from "../../../components/card-product";
 
 const { height } = Dimensions.get("window");
 
@@ -27,10 +27,7 @@ export function Home() {
         setIsOpen(!isOpen);
     };
 
-    const goToAnnoucement = () => {
-        navigate("Annoucement", {})
-    }
-
+    
     const goToMyAnnoucement = () => {
         navigate("My Annoucement", {})
     }
@@ -55,10 +52,6 @@ export function Home() {
                     >
                         Criar Anúncio
                     </Button>
-                    {/* <TouchableOpacity className="bg-gray-600 flex-row items-center gap-2 p-2 rounded-xl" onPress={goToCreateAnnoucement}>
-                        <Plus size={21} color="#fff"/>
-                        <Text className="text-gray-100">Criar anúncio</Text>
-                    </TouchableOpacity> */}
                 </View>
 
                 <Text className="text-gray-500 mb-5">Seus produtos anunciados para venda </Text>
@@ -96,16 +89,19 @@ export function Home() {
                 </View>
 
                 <View className="flex-row items-center justify-between flex-wrap w-full gap-y-10">
-                    <View>
-                        <TouchableOpacity className="rounded-xl overflow-hidden w-[180px] h-[100px]" onPress={goToAnnoucement}>
-                            <ImageBackground source={Product} className="flex-row justify-between w-full h-full p-1">
-                                <Image source={AvatarHome} />
-                                <Text className="bg-gray-700 text-white h-[30px] p-2 rounded-xl">Usado</Text>
-                            </ImageBackground>
-                        </TouchableOpacity>
-                        <Text className="text-gray-700 text-sm my-2">Tênis vermelho</Text>
-                        <Text className="text-gray-900 text-sm font-bold">R$ 59,90</Text>
-                    </View>
+                    <CardProduct 
+                        image={<Image source={AvatarHome} />}
+                        isNewOrUsed="novo"
+                    />
+
+                    <CardProduct 
+                        image={<Image source={AvatarHome} />}
+                        isNewOrUsed="usado"
+                    />
+                    <CardProduct 
+                        image={<Image source={AvatarHome} />}
+                        isNewOrUsed="usado"
+                    />
                 </View>
             </ScrollView>
 

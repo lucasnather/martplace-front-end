@@ -1,8 +1,8 @@
 import { X } from "phosphor-react-native";
 import { useState } from "react";
 import { ScrollView, Switch, Text, TouchableOpacity, View } from "react-native";
-import BouncyCheckbox from "react-native-bouncy-checkbox"
 import { Button } from "../button";
+import { CheckBox } from "../checkbox";
 
 type FilterProps = {
     toggleFilter: () => void
@@ -48,36 +48,12 @@ export function Filter({ toggleFilter }: FilterProps) {
                 <Text className="text-base-gray-2 font-bold mb-5">Meios de pagamentos aceitos</Text>
 
                 <View className="mb-10">
-                    <View className="flex-row mb-2">
-                        <BouncyCheckbox 
-                            fillColor="#364D9D"
-                        />
-                        <Text className="text-[16px] text-base-gray-2">Boleto</Text>
-                    </View>
-                    <View className="flex-row mb-2">
-                        <BouncyCheckbox 
-                            fillColor="#364D9D"
-                        />
-                        <Text className="text-[16px] text-base-gray-2">Pix</Text>
-                    </View>
-                    <View className="flex-row mb-2">
-                        <BouncyCheckbox 
-                            fillColor="#364D9D"
-                        />
-                        <Text className="text-[16px] text-base-gray-2">Dinheiro</Text>
-                    </View>
-                    <View className="flex-row mb-2">
-                        <BouncyCheckbox 
-                            fillColor="#364D9D"
-                        />
-                        <Text className="text-[16px] text-base-gray-2">Cartão de Crédito</Text>
-                    </View>
-                    <View className="flex-row mb-2">
-                        <BouncyCheckbox 
-                            fillColor="#364D9D"
-                        />
-                        <Text className="text-[16px] text-base-gray-2">Depósito Bancário</Text>
-                    </View>
+            
+                    <CheckBox title="Boleto" />
+                    <CheckBox title="Pix" />
+                    <CheckBox title="Dinheiro" />
+                    <CheckBox title="Cartão de Crédito" />
+                    <CheckBox title="Depósito Bancário" />
                 </View>
             </View>
 

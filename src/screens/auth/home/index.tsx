@@ -34,6 +34,10 @@ export function Home() {
         navigate("My Annoucement", {})
     }
 
+    const goToCreateAnnoucement = () => {
+        navigate("Create Annoucement", {})
+    }
+
     return (
         <SafeAreaView className="flex-1">
             <ScrollView className="px-5">
@@ -43,7 +47,7 @@ export function Home() {
                         <Text className="w-[100px]">Boas vindas, <Text className="font-bold">Maria!</Text></Text>
                     </View>
 
-                    <TouchableOpacity className="bg-gray-600 flex-row items-center gap-2 p-2 rounded-xl">
+                    <TouchableOpacity className="bg-gray-600 flex-row items-center gap-2 p-2 rounded-xl" onPress={goToCreateAnnoucement}>
                         <Plus size={21} color="#fff"/>
                         <Text className="text-gray-100">Criar anúncio</Text>
                     </TouchableOpacity>

@@ -116,12 +116,12 @@ export function CreateAnnoucement() {
                     <View className="flex-row justify-between gap-5">
                         <View className="w-[50%]">
                             <TouchableOpacity className="bg-base-gray-5 rounded-md py-[12px] px-[30px]">
-                                <Text className="text-base-gray-2 text-center text-[14px] font-bold">Resetar Filtros</Text>
+                                <Text className="text-base-gray-2 text-center text-[14px] font-bold">Cancelar</Text>
                             </TouchableOpacity>
                         </View>
                         <View className="w-[45%]">
                             <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px]">
-                                <Text className="text-base-gray-7 text-center  text-[14px] font-bold">Aplicar Filtros</Text>
+                                <Text className="text-base-gray-7 text-center  text-[14px] font-bold">Avançar</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

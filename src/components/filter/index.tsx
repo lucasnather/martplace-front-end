@@ -2,6 +2,7 @@ import { X } from "phosphor-react-native";
 import { useState } from "react";
 import { ScrollView, Switch, Text, TouchableOpacity, View } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox"
+import { Button } from "../button";
 
 type FilterProps = {
     toggleFilter: () => void
@@ -81,15 +82,15 @@ export function Filter({ toggleFilter }: FilterProps) {
             </View>
 
             <View className="flex-row gap-5">
-                <View>
-                    <TouchableOpacity className="bg-base-gray-5 rounded-md py-[12px] px-[30px]">
-                        <Text className="text-base-gray-2 text-[14px] font-bold">Resetar Filtros</Text>
-                    </TouchableOpacity>
+                <View className="w-[50%]">
+                    <Button variant="gray" >
+                        Resetar Filtros
+                    </Button>
                 </View>
-                <View>
-                    <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px]">
-                        <Text className="text-base-gray-7 text-[14px] font-bold">Aplicar Filtros</Text>
-                    </TouchableOpacity>
+                <View className="w-[45%]">
+                    <Button variant="black">
+                        Aplicar Filtros
+                    </Button>
                 </View>
             </View>
         </ScrollView>

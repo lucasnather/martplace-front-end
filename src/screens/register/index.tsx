@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.png"
 import Avatar from "../../assets/avatar.png"
 import { PencilSimpleLine } from "phosphor-react-native";
 import { useNavigation } from "@react-navigation/native";
+import { Button } from "../../components/button";
 
 export function Register() {
     const { navigate} = useNavigation()
@@ -45,15 +46,15 @@ export function Register() {
                             placeholder="Confirmar Senha"
                             className="bg-base-gray-7 p-5 rounded-xl my-3"
                     />
-                    <TouchableOpacity className="bg-base-gray p-5 rounded-xl items-center justify-center mt-5 mb-10">
-                            <Text className="text-base-gray-7 font-bold">Entrar</Text>
-                    </TouchableOpacity>
+                    <Button variant="black">
+                       Criar
+                    </Button>
                 </View>
                 <View>
                     <Text className="text-center text-base-gray-2 text-[14px] mb-5">Já tem uma conta?</Text>
-                    <TouchableOpacity className="bg-base-gray-5 items-center p-5 rounded-xl" onPress={goToLogin}>
-                        <Text  className="text-base-gray-2 font-bold">Ir para o login</Text>
-                    </TouchableOpacity>
+                    <Button onPress={goToLogin} variant="gray">
+                        Ir para o login
+                    </Button>
                 </View>
             </View>
         </ScrollView>

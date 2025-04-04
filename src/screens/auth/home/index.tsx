@@ -5,6 +5,7 @@ import AvatarHome from "../../../assets/avatar-home.png";
 import Product from "../../../assets/product.png";
 import { Filter } from "../../../components/filter";
 import { useNavigation } from "@react-navigation/native";
+import { Button } from "../../../components/button";
 
 const { height } = Dimensions.get("window");
 
@@ -47,10 +48,17 @@ export function Home() {
                         <Text className="w-[100px]">Boas vindas, <Text className="font-bold">Maria!</Text></Text>
                     </View>
 
-                    <TouchableOpacity className="bg-gray-600 flex-row items-center gap-2 p-2 rounded-xl" onPress={goToCreateAnnoucement}>
+                    <Button 
+                        variant="black"
+                        onPress={goToCreateAnnoucement}
+                        icon={ <Plus size={21} color="#fff"/>}    
+                    >
+                        Criar Anúncio
+                    </Button>
+                    {/* <TouchableOpacity className="bg-gray-600 flex-row items-center gap-2 p-2 rounded-xl" onPress={goToCreateAnnoucement}>
                         <Plus size={21} color="#fff"/>
                         <Text className="text-gray-100">Criar anúncio</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
 
                 <Text className="text-gray-500 mb-5">Seus produtos anunciados para venda </Text>

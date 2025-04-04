@@ -3,6 +3,7 @@ import { ArrowLeft, Bank, Barcode, Money, PencilSimpleLine, Power, QrCode, Trash
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Bike from "../../../assets/bike.png"
 import User from "../../../assets/user-annouc.png"
+import { Button } from "../../../components/button";
 
 export function UpdateAnnoucements() {
     const { goBack } = useNavigation()
@@ -58,14 +59,21 @@ export function UpdateAnnoucements() {
                             </View>
                         </View>
 
-                        <TouchableOpacity className="flex-row items-center gap-2 bg-base-gray rounded-[6px] mt-5 mb-2 justify-center">
+
+                        <Button variant="black" icon={<Power color="#F7F7F8" />}>
+                            Desativar anúncio
+                        </Button>
+                        <Button variant="gray" icon={<Trash />}>
+                            Excluir anúncio
+                        </Button>
+                        {/* <TouchableOpacity className="flex-row items-center gap-2 bg-base-gray rounded-[6px] mt-5 mb-2 justify-center">
                             <Power color="#F7F7F8" />
                             <Text className="font-bold text-base-gray-7 py-5">Desativar anúncio</Text>
                         </TouchableOpacity>
                         <TouchableOpacity className="flex-row items-center gap-2 rounded-[6px]  bg-base-gray-5 justify-center">
                             <Trash />
                             <Text className="font-bold text-base-gray-2 py-5">Excluir anúncio</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                     </View>
                 </ScrollView>
             </SafeAreaView>

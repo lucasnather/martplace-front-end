@@ -3,6 +3,7 @@ import { ArrowLeft } from "phosphor-react-native";
 import { useState } from "react";
 import { SafeAreaView, ScrollView, Switch, Text, TextInput, TouchableOpacity, View } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox"
+import { Button } from "../../../components/button";
 
 export function CreateAnnoucement() {
     const { goBack, navigate } = useNavigation()
@@ -119,14 +120,14 @@ export function CreateAnnoucement() {
 
                     <View className="flex-row justify-between gap-5">
                         <View className="w-[50%]">
-                            <TouchableOpacity className="bg-base-gray-5 rounded-md py-[12px] px-[30px]">
-                                <Text className="text-base-gray-2 text-center text-[14px] font-bold">Cancelar</Text>
-                            </TouchableOpacity>
+                            <Button variant="gray" onPress={navigateToBack}>
+                                Cancelar
+                            </Button>
                         </View>
                         <View className="w-[45%]">
-                            <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px]" onPress={navigateToPreVisualization} >
-                                <Text className="text-base-gray-7 text-center  text-[14px] font-bold">Avançar</Text>
-                            </TouchableOpacity>
+                            <Button variant="black" onPress={navigateToPreVisualization}>
+                                Avançar
+                            </Button>
                         </View>
                     </View>
                 </View>

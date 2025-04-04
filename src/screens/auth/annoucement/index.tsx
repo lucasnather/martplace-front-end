@@ -1,8 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import { ArrowLeft, Bank, Barcode, CreditCard, Money, QrCode, WhatsappLogo } from "phosphor-react-native";
-import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Bike from "../../../assets/bike.png"
 import User from "../../../assets/user-annouc.png"
+import { Button } from "../../../components/button";
 
 export function Annoucement() {
     const { goBack } = useNavigation()
@@ -66,10 +67,9 @@ export function Annoucement() {
                 </ScrollView>
                 <View className="absolute bottom-0 left-0 right-0 bg-white flex-row justify-between items-center px-[24px] py-[30px]">
                     <Text className="font-bold text-[24px] text-primary-blue">R$ 120,00</Text>
-                    <TouchableOpacity className="flex-row items-center gap-2 bg-primary-blue p-3 rounded-[6px]">
-                        <WhatsappLogo color="#F7F7F8"/>
-                        <Text className="text-base-gray-7">Entrar em contato</Text>
-                    </TouchableOpacity>
+                    <Button variant="blue" icon={<WhatsappLogo color="#F7F7F8"/>}>
+                        Entrar em contato
+                    </Button>
                 </View>
             </SafeAreaView>
         </View>

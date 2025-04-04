@@ -1,10 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
 import { ArrowLeft, Bank, Barcode, CreditCard, Money, QrCode, Tag } from "phosphor-react-native";
 import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity} from "react-native";
 import Bike from "../../../assets/bike.png"
 import User from "../../../assets/user-annouc.png"
+import { Button } from "../../../components/button";
 
 export function PreVisualization() {
-    
+    const { goBack } = useNavigation()
+
     return (
         <View>
             <ScrollView className="mb-5">
@@ -63,16 +66,14 @@ export function PreVisualization() {
 
                     <View className="flex-row justify-between gap-5 px-5">
                         <View className="w-[50%]">
-                            <TouchableOpacity className="bg-base-gray-5 rounded-md py-[12px] px-[30px] flex-row items-center gap-2">
-                                <ArrowLeft size={21} />
-                                <Text className="text-base-gray-2 text-center text-[14px] font-bold">Voltar e editar</Text>
-                            </TouchableOpacity>
+                            <Button variant="gray" icon={<ArrowLeft size={21} />} onPress={goBack}>
+                                Voltar e editar
+                            </Button>
                         </View>
                         <View className="w-[45%]">
-                            <TouchableOpacity className="bg-base-gray rounded-md py-[12px] px-[30px] flex-row items-center gap-2" >
-                                <Tag color="#fff" size={21} />
-                                <Text className="text-base-gray-7 text-center  text-[14px] font-bold">Publicar</Text>
-                            </TouchableOpacity>
+                            <Button icon={<Tag color="#fff" size={21} />}>
+                                Publicar
+                            </Button>
                         </View>
                     </View>
             </ScrollView>
